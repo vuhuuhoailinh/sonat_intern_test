@@ -2,6 +2,7 @@
 
 A gameplay prototype of "Magic Bloom: Sort Water" created for the Sonat Intern Test. Developed using Unity 6.
 
+🎥 **[Demo YouTube](https://youtu.be/2DeWXduCSqg)**
 ## Features
 * **Core Mechanics:** Basic water pouring and color sorting logic.
 * **Level Design:** 4 playable levels configured using ScriptableObjects (`LevelData`). Each level contains exactly 8 tubes.
