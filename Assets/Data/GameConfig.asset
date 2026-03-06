@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e58a59cfb1c7047959112af66d71e3, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  selectHeight: 0.5
+  pourHeight: 1.5
+  pourXOffset: 1.1
+  pourAngle: 88
+  timePerUnit: 0.15
+  streamStartYOffset: -0.33
+  streamEndYOffset: -0.8
+  streamBaseWidth: 0.075
