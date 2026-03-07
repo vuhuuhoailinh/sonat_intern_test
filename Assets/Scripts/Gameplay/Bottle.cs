@@ -17,8 +17,6 @@ public class Bottle : MonoBehaviour
         Liquid = GetComponent<BottleLiquid>();
         Motion = GetComponent<BottleMotion>();
     }
-
-    // MỚI: Nhận Data từ GameManager bơm vào
     public void Initialize(int cap, Color[] startColors)
     {
         capacity = cap;
@@ -29,7 +27,7 @@ public class Bottle : MonoBehaviour
         Motion.Initialize();
 
         foreach (var c in startColors)
-            PushWater(c, 0f); // 0f để đổ đầy ngay lập tức không cần anim
+            PushWater(c, 0f);
     }
 
     void OnMouseDown()

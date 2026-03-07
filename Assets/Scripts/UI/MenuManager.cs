@@ -3,7 +3,7 @@
 public class MenuManager : MonoBehaviour
 {
     [Header("UI Reference")]
-    public GameObject menuOverlay; // Cục nền đen chứa toàn bộ cái Menu Board
+    public GameObject menuOverlay;
 
     void Start()
     {
@@ -13,12 +13,12 @@ public class MenuManager : MonoBehaviour
     public void OpenMenu()
     {
         if (menuOverlay != null) menuOverlay.SetActive(true);
-        Time.timeScale = 0f; // Dừng game
+        Time.timeScale = 0f;
     }
 
     public void CloseMenu()
     {
         if (menuOverlay != null) menuOverlay.SetActive(false);
-        Time.timeScale = 1f; // Chạy lại game
+        Time.timeScale = 1f;
     }
 }

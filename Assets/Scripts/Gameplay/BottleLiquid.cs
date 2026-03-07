@@ -23,7 +23,6 @@ public class BottleLiquid : MonoBehaviour
     #region Initialization
     private void InitWaterVisuals()
     {
-        // 1. CHỈ lưu kích thước gốc nếu mảng này chưa từng được tạo
         if (originalWaterScales == null || originalWaterScales.Length == 0)
         {
             originalWaterScales = new Vector3[waterVisuals.Length];
@@ -33,10 +32,9 @@ public class BottleLiquid : MonoBehaviour
             }
         }
 
-        // 2. Tắt các khối nước đi và DẬP TẮT mọi animation đang chạy dở
         for (int i = 0; i < waterVisuals.Length; i++)
         {
-            waterVisuals[i].transform.DOKill(); // Ngắt DOTween an toàn
+            waterVisuals[i].transform.DOKill();
             waterVisuals[i].gameObject.SetActive(false);
         }
 

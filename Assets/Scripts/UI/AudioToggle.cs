@@ -9,8 +9,8 @@ public class AudioToggle : MonoBehaviour
     public AudioType targetAudio;
 
     [Header("Sprites")]
-    public Sprite onSprite;  // Nét vẽ lúc BẬT
-    public Sprite offSprite; // Nét vẽ lúc TẮT (Gạch chéo)
+    public Sprite onSprite; 
+    public Sprite offSprite; 
 
     private Image img;
     private bool isOn = true;
@@ -21,13 +21,11 @@ public class AudioToggle : MonoBehaviour
         UpdateVisuals();
     }
 
-    // Kéo hàm này vào sự kiện OnClick() của Button
     public void OnToggleClicked()
     {
-        isOn = !isOn; // Đảo trạng thái
+        isOn = !isOn;
         UpdateVisuals();
 
-        // Gọi AudioManager tùy theo loại nút
         if (targetAudio == AudioType.BGM)
             AudioManager.Instance.SetBGMState(isOn);
         else

@@ -26,7 +26,6 @@ public class PourStream : MonoBehaviour
         float distance = Mathf.Abs(startPos.y - targetPosCached.y);
         currentTween?.Kill();
 
-        // MỚI: Đọc baseWidth từ GameConfig
         float width = GameManager.Instance.gameConfig.streamBaseWidth;
         transform.localScale = new Vector3(width, 0f, 1f);
 
@@ -36,7 +35,6 @@ public class PourStream : MonoBehaviour
 
     public void Hide(float duration)
     {
-        // ... (Giữ nguyên như cũ)
         currentTween?.Kill();
         currentTween = DOTween.Sequence();
         currentTween.Append(transform.DOScaleX(0f, duration * 0.5f));

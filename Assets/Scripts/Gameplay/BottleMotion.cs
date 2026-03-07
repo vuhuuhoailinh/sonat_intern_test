@@ -11,7 +11,6 @@ public class BottleMotion : MonoBehaviour
     private bool isPosInitialized = false;
     public void Initialize()
     {
-        // 1. CHỈ lưu vị trí gốc ở lần khởi tạo ĐẦU TIÊN
         if (!isPosInitialized)
         {
             originalPos = transform.position;
@@ -22,14 +21,11 @@ public class BottleMotion : MonoBehaviour
             isPosInitialized = true;
         }
 
-        // 2. Dập tắt mọi Animation (nhấc, lật, rung) đang chạy dở trên vỏ chai
         transform.DOKill();
 
-        // 3. Ép vỏ chai cắm thẳng xuống đất về lại vị trí và góc quay ban đầu
         transform.position = originalPos;
         transform.rotation = Quaternion.identity;
 
-        // 4. Dọn dẹp nắp bần (nắp bị văng ra lúc Win màn trước)
         if (corkObject != null)
         {
             corkObject.transform.DOKill();
@@ -40,7 +36,6 @@ public class BottleMotion : MonoBehaviour
 
     public void PlayWinAnimation()
     {
-        // ... (Giữ nguyên như cũ)
         if (corkObject != null)
         {
             corkObject.SetActive(true);
@@ -54,7 +49,6 @@ public class BottleMotion : MonoBehaviour
     public void AnimateSelect() => transform.DOMoveY(originalPos.y + GameManager.Instance.gameConfig.selectHeight, 0.2f).SetEase(Ease.OutQuad);
     public void AnimateDeselect() => transform.DOMoveY(originalPos.y, 0.2f).SetEase(Ease.OutQuad);
 
-    // Thay đổi tham số truyền vào
     public void AnimatePour(Transform targetTransform, int unitsToPour, GameConfig config,
             System.Action<Vector3> onReadyToPour,
             System.Action onPourUnit,
